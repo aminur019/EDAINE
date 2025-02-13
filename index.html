@@ -5,26 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EDAINE</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet"/>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- AOS Library -->
   <style>
     body {
       font-family: 'Roboto', sans-serif;
     }
-    .text-24 { font-size: 22px; }
-    .text-30 { font-size: 24px; }
-    .text-35 { font-size: 30px; }
+	.text-corbel{font-family:'Corbel Light'; font-weight:100;}
+	.text-berlin{font-family:'Berlin Sans FB'; font-weight:700;}
+
+    .text-24 { font-size: 24px; }
+    .text-30 { font-size: 30px; }
+    .text-35 { font-size: 35px; }
     .calendar-grid {
       display: grid;
       grid-template-columns: repeat(7, 1fr);
       gap: 0.5rem;
     }
-    .text-rotate {
-      transform: rotate(43deg);
-      margin-right: -110px;
-      margin-top: -33px;
-    }
+ 
+	.mybg{background:#BF9000}
+	.text-c1{color:#BF9000}
+	.mybg:hover {background:#9E7800}
+
   </style>
 	<script>
         // Right-click নিষ্ক্রিয় করতে
@@ -52,56 +55,58 @@
     </script>
 </head>
 <body class="bg-gray-100">
-  <header class="bg-white shadow-md">
+  <header class=" max-w-7xl mx-auto bg-white shadow-md py-4">
     <div class="container mx-auto flex justify-between items-center py-4 px-6">
-      <div class="text-[30px] font-bold text-yellow-700 hover:text-yellow-800 transition-colors duration-300">
+      <div class="text-[30px] font-bold text-c1 hover:text-yellow-800 transition-colors duration-300">
         EDAINE
       </div>
       <div class="md:hidden">
-        <button class="text-yellow-700 focus:outline-none hover:text-yellow-800 transition-colors duration-300" id="nav-toggle">
+        <button class="text-c1 focus:outline-none hover:text-yellow-800 transition-colors duration-300" id="nav-toggle">
           <i class="fas fa-bars"></i>
         </button>
       </div>
-      <nav class="hidden md:flex space-x-6 items-center" id="nav-menu">
-        <a class="text-yellow-700 hover:text-yellow-800 transition-colors duration-300" href="#">Accueil</a>
+      <nav class="hidden md:flex space-x-6 items-center text-[18px]" id="nav-menu">
+        <a class="text-c1 hover:text-yellow-800 transition-colors duration-300" href="#">Accueil</a>
         <a class="text-gray-700 hover:text-gray-900 transition-colors duration-300" href="#">Soins</a>
         <a class="text-gray-700 hover:text-gray-900 transition-colors duration-300" href="#">Contact</a>
-        <a class="bg-yellow-700 text-white py-2 px-4 rounded hover:bg-yellow-800 transition-colors duration-300" href="#">Prendre Rendez-Vous</a>
+        <a class="mybg text-white py-2 px-4 rounded hover:bg transition-colors duration-300" href="#">Prendre Rendez-Vous</a>
       </nav>
     </div>
-    <div class="hidden md:hidden" id="mobile-menu">
+    <div class="hidden md:hidden text-[18px]" id="mobile-menu">
       <nav class="flex flex-col px-6 py-4 space-y-2">
-        <a class="block text-yellow-700 hover:text-yellow-800 transition-colors duration-300" href="#">Accueil</a>
+        <a class="block text-c1 hover:text-yellow-800 transition-colors duration-300" href="#">Accueil</a>
         <a class="block text-gray-700 hover:text-gray-900 transition-colors duration-300" href="#">Soins</a>
         <a class="block text-gray-700 hover:text-gray-900 transition-colors duration-300" href="#">Contact</a>
-        <a class="block bg-yellow-700 text-white py-2 px-4 rounded hover:bg-yellow-800 transition-colors duration-300" href="#">Prendre Rendez-Vous</a>
+        <a class="block mybg text-white py-2 px-4 rounded hover:bg transition-colors duration-300" href="#">Prendre Rendez-Vous</a>
       </nav>
     </div>
   </header>
 
-  <section class="relative" data-aos="fade-up">
-    <img alt="A cactus plant behind a white wall with a clear sky in the background" class="w-full h-screen" height="600" src="Assets/Bien etre.jpg" width="1200"/>
-    <div class="absolute top-1/4 left-1/4 transform -translate-x-1/4 -translate-y-1/4 p-4">
-      <div class="bg-yellow-100 text-yellow-700 px-4 py-2 inline-block mb-4 hover:bg-yellow-200 transition-colors duration-300">
+  <section class=" max-w-7xl mx-auto relative h-[90vh]" data-aos="fade-up" style="background:url('Assets/Bien etre.jpg'); background-size: cover;   background-repeat: no-repeat;background-position: center;">
+    <img alt="A cactus plant behind a white wall with a clear sky in the background" class="hidden w-full h-[85vh]" height="600" src="Assets/Bien etre.jpg" width="1200"/>
+	<div class="h-full w-full flex items-flex-start justify-center flex-col pl-4 md:pl-36  "
+    <div class="pl-24 transform -translate-x-1/4 -translate-y-1/4 p-4 ]" >
+      <div class="bg-white w-[360px] text-c1 px-4 py-2 inline-block mb-4 text-[20px] transition-colors duration-300">
         SOINS ENERGETIQUES A DISTANCE
       </div>
-      <h1 class="text-4xl font-bold text-gray-800 mb-4 py-8">
+      <h1 class="text-[30px] font-bold text-gray-800 mb-4 py-8">
         Rééquilibrez vos énergies pour une vie plus <br> harmonieuse et sereine
       </h1>
-      <div class="flex space-x-4">
-        <a class="bg-yellow-700 text-white py-2 px-4 rounded hover:bg-yellow-800 transition-colors duration-300" href="#">Découvrir les soins</a>
-        <a class="bg-yellow-700 text-white py-2 px-4 rounded hover:bg-yellow-800 transition-colors duration-300" href="tel:0755015122">07 55 01 51 22</a>
+      <div class="flex space-x-4 text-[18px]">
+        <a class="mybg text-white py-2 px-4 rounded hover:bg transition-colors duration-300" href="#">Découvrir les soins</a>
+        <a class="mybg text-white py-2 px-4 rounded hover:bg transition-colors duration-300" href="tel:0755015122">07 55 01 51 22</a>
       </div>
     </div>
+	</div>
   </section>
 
   <section >
-    <div class="max-w-6xl mx-auto p-6">
-      <div class="flex flex-col md:flex-row" data-aos="fade-up">
-        <div class="md:w-2/4">
+    <div class="max-w-7xl mx-auto p-6 pt-24">
+      <div class="flex flex-col md:flex-row" data-aos="fade-up" >
+        <div class="md:w-2/4 pr-8">
           <h1 class="text-35 font-bold mb-2">EDWIGE LANE</h1>
           <div class="border-b-4 border-yellow-600 w-16 mb-4"></div>
-          <h2 class="text-30 font-bold text-yellow-600 mb-4">Énergéticienne</h2>
+          <h2 class="text-30 font-bold text-c1 mb-4">Énergéticienne</h2>
           <p class="mb-4 text-24 text-justify">Je suis Edwige, praticienne en énergie.</p>
 		 <p class="mb-4 text-24 text-justify">
 		  Mon premier contact avec les mondes subtils a eu lieu à 5 ans, lorsque j’ai ressenti la présence d’une âme prête à rejoindre les plans supérieurs. Après avoir traversé un mal-être lié à mon travail, j’ai exploré la méditation de pleine conscience, ce qui a éveillé mes capacités psychiques comme la médiumnité et le magnétisme.
@@ -109,55 +114,55 @@
 		 <p class="mb-4 text-24 text-justify">
 		  En me reconnectant à mon Soi-Divin ( <i>		   Conscience Supérieure provenant de la Source		  </i>		  ), j’ai retrouvé ma véritable identité et approfondi mes facultés. Mon approche repose sur des soins énergétiques canalisés pour un rééquilibrage global. Je travaille également avec les plans subtils supérieurs pour apporter des messages et des soins de guérison.
 		 </p>
-		  <button class="bg-yellow-600 text-white py-2 px-4 rounded mt-4 hover:bg-yellow-700 transition-colors duration-300">Contactez-moi</button>
+		  <button class="mybg text-white py-2 px-4 rounded mt-4 hover:mybg transition-colors duration-300 text-[17px]">Contactez-moi</button>
         </div>
-        <div class="md:w-2/4 mt-6 md:mt-0 md:ml-6 pt-24 pb-8" >
-          <img alt="Portrait of Edwige Lane" class="h-[600px] w-[400px]" src="Assets/Edwige Edaine Soins Energétiques.png">
+        <div class="md:w-2/4 mt-6 md:mt-0 md:ml-6 pt-24 pb-8" data-aos="fade-left" data-aos-delay="100"">
+          <img alt="Portrait of Edwige Lane" class="h-[720px] w-[600px]" src="Assets/Edwige Edaine Soins Energétiques.png">
         </div>
       </div>
     </div>
   </section>
 
   <section class="my-16" data-aos="fade-up">
-    <div class="max-w-6xl mx-auto pb-12 bg-[#faf9f5]">
+    <div class="max-w-7xl mx-auto pb-12 bg-[#faf9f5]">
       <div class="bg-[#f0ebe4] pt-8 pb-2 pl-16">
         <h1 class="text-[35px] font-bold text-[#3a3a3a] mb-4">MES SOINS</h1>
         <div class="border-b-4 border-[#b89c5a] w-16 mb-8"></div>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-16">
         <div class="text-center" data-aos="fade-right">
-          <img alt="Person holding rings and a book" class="mb-4" style="width:300px; height:400px;" src="Assets/Medecine douce.png"/>
+          <img alt="Person holding rings and a book " class="mb-4 w-full md:w-[300px] h-[400px]" src="Assets/Medecine douce.png"/>
           <div class="flex justify-center items-center">
-            <h2 class="text-[70px] font-bold text-[#b89c5a] mr-2">01</h2>
-            <p class="text-[28px] text-[#3a3a3a] text-left">Déblocages<br/>Réalignement</p>
+            <h2 class="text-[70px] font-bold text-c1 mr-2">01</h2>
+            <p class="text-[28px] text-[#3a3a3a] text-left text-corbel">Déblocages<br/>Réalignement</p>
           </div>
         </div>
-        <div class="text-center" data-aos="fade-up">
-          <img alt="Candles and a brush on a wooden table" style="width:400px; height:500px;" class="mb-4" src="Assets/Psychologie.jpg"/>
+        <div class="text-center ml-[-50px]" data-aos="fade-up">
+          <img alt="Candles and a brush on a wooden table" class="mb-4 w-full md:w-[400px] h-[500px]" src="Assets/Psychologie.jpg"/>
           <div class="flex justify-center items-center">
-            <h2 class="text-[70px] font-bold text-[#b89c5a] mr-2">02</h2>
-            <p class="text-[28px] text-[#3a3a3a] text-left">Soins</p>
+            <h2 class="text-[70px] font-bold text-c1 mr-2">02</h2>
+            <p class="text-[28px] text-[#3a3a3a] text-left text-corbel">Soins <br> Holistiques</p>
           </div>
         </div>
         <div class="text-center" data-aos="fade-left">
-          <img alt="Dried flowers" class="mb-4" style="width:300px; height:400px;" src="Assets/Relaxation.jpg"/>
+          <img alt="Dried flowers" class="mb-4 w-full md:w-[300px] h-[400px]"  src="Assets/Relaxation.jpg"/>
           <div class="flex justify-center items-center">
-            <h2 class="text-[70px] font-bold text-[#b89c5a] mr-2">03</h2>
-            <p class="text-[28px] text-[#3a3a3a] text-left">Rééquilibrage<br/>Déparasitage</p>
+            <h2 class="text-[70px] font-bold text-c1 mr-2">03</h2>
+            <p class="text-[28px] text-[#3a3a3a] text-left text-corbel">Rééquilibrage<br/>Déparasitage</p>
           </div>
         </div>
       </div>
       <div class="text-center mt-8">
-        <button class="bg-[#b89c5a] text-white py-2 px-6 rounded-full text-lg hover:bg-[#a68a4a] transition-colors duration-300">Découvrir les soins</button>
+        <button class="mybg text-white py-2 px-6 rounded-full text-lg  transition-colors duration-300">Découvrir les soins</button>
       </div>
     </div>
   </section>
 
   <section class="my-16" data-aos="fade-up">
-    <div class="max-w-6xl mx-auto p-4">
+    <div class="max-w-7xl mx-auto p-4">
       <div class="shadow-md rounded-lg p-6 flex flex-col md:flex-row">
         <div class="w-full md:w-1/2 p-4">
-          <h1 class="text-yellow-600 text-xl font-bold text-35">EDAINE</h1>
+          <h1 class="text-c1 text-xl font-bold text-35">EDAINE</h1>
           <p class="text-gray-600 mt-2 text-30">Soins Énergétiques à distance -</p>
           <h2 class="text-gray-800 text-2xl font-bold mt-4 text-24">Votre Séance</h2>
           <div class="flex items-center mt-2">
@@ -167,20 +172,19 @@
 		  
                 <p class="text-gray-600 mt-4 text-24">
                     Sélectionnez la date, puis, vous pourrez choisir le type de rendez-vous que vous souhaitez dans le formulaire: Soin 1: Soin de déblocages et réalignement; Soin 2: Soins holistiques; Soin 3: Soin de rééquilibrage et de déparasitage.
-                </p>   
-		<p class="text-gray-600 mt-4 text-24">
-                    Les services proposés visent le boen-être et ne remplacent pas un suivi médical, qui reste prioritaire en cas de besoin.
-                </p>
-		  <a href="#" class="text-yellow-600 mt-4 inline-block text-24">Paramètres des cookies</a>
+                </p>          
+		  <a href="#" class="text-c1 mt-4 inline-block text-24">Paramètres des cookies</a>
         </div>
         <div class="w-full md:w-1/2 p-4">
-          <div class="bg-gray-100 p-4 rounded-lg shadow-inner overflow-hidden">
+			
+          <div class="bg-gray-100 p-4 rounded-lg shadow-inner ">
             <div class="flex justify-between items-center">
               <h2 class="text-gray-800 text-24 font-bold py-8">Sélectionnez la date et l'heure</h2>
-              <div class="text-rotate bg-gray-800 text-white text-xs py-4 px-24 rounded text-center leading-[20px]">ALIMENTÉ &nbsp; PAR <br> <strong class="text-[18px] py-2">Calendly</strong></div>
+			  <image src="Assets/sidebaner.png" class="h-[150px] w-[150px] mr-[-25px] mt-[-25px]">
+              <div class=" hidden text-rotate bg-gray-800 text-white text-xs py-4 px-24 rounded text-center leading-[20px]">ALIMENTÉ &nbsp; PAR <br> <strong class="text-[18px] py-2">Calendly</strong></div>
             </div>
             <div class="flex justify-between items-center mt-4">
-              <button id="prevMonth" class="text-gray-600 hover:text-gray-800 transition-colors duration-300 "><i class="fas fa-chevron-left"></i></button>
+              <button id="prevMonth" class="text-gray-600 hover:text-gray-800 transition-colors duration-300"><i class="fas fa-chevron-left"></i></button>
               <span id="currentMonth" class="text-gray-600 uppercase"></span>
               <button id="nextMonth" class="text-gray-600 hover:text-gray-800 transition-colors duration-300"><i class="fas fa-chevron-right"></i></button>
             </div>
@@ -202,36 +206,37 @@
   </section>
 
   <section class="my-16" data-aos="fade-up">
-    <div class="max-w-6xl mx-auto p-4 mt-8">
-      <h1 class="text-center text-2xl font-bold mb-2">Témoignages</h1>
-      <div class="flex justify-center mb-8">
-        <div class="w-16 h-1 bg-yellow-600"></div>
+    <div class="max-w-7xl mx-auto p-4 mt-8">
+      <h1 class="text-center text-[36px] font-bold mb-2">Témoignages</h1>
+      <div class="flex justify-center mb-8 pb-8">
+        <div class="w-16 h-1 mybg"></div>
       </div>
       <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4">
         <div class="relative w-full md:w-1/3" data-aos="fade-right">
-          <img alt="Water with sunlight reflections" class="w-full h-[400px] object-cover" height="600" src="Assets/Stress.png" width="300"/>
+          <img alt="Water with sunlight reflections" class="w-full h-[550px] object-cover" height="600" src="Assets/Stress.png" width="300"/>
           <div class="absolute inset-0 flex items-center justify-center">
-            <i class="fas fa-play-circle text-white text-6xl"></i>
+		  <i class="fa-regular fa-circle-play text-c1 text-[70px]"></i>
+            <i class="hidden fas fa-circle-play text-white text-[100px]"></i>
           </div>
         </div>
         <div class="w-full md:w-1/3" data-aos="fade-up">
-          <img alt="Woman's face with plants" class="w-full h-[400px] object-cover" src="Assets/Soins énergétiques.webp" width="300"/>
+          <img alt="Woman's face with plants" class="w-full h-[550px] object-cover" src="Assets/Soins énergétiques.webp" width="300"/>
         </div>
-        <div class="w-full md:w-1/3 bg-[#f0eee6] p-4" data-aos="fade-left">
-          <p class="text-yellow-600 text-3xl leading-none">"</p>
-          <p class="italic text-[15px] text-gray-700">
+        <div class="w-full md:w-1/3 bg-[#f0eee6] p-4 py-8" data-aos="fade-left">
+          <p class="hidden text-c1 text-3xl leading-none">"</p>
+          <p class="italic text-[21px] text-gray-700"><i class="fa-solid fa-quote-left text-c1 text-[30px]"></i>
                      Je suis venue voir Edwige pour des séances de soins énergétiques après plusieurs mois de stress et de tensions émotionnelles. Dès la première séance, j'ai ressenti un apaisement profond, comme si un poids était soudainement levé de mes épaules. Les blocages qui me freinaient dans ma vie personnelle ont commencé à se dissiper. Je me sens aujourd'hui plus sereine, plus alignée avec moi-même et mes projets. Je recommande vivement ces soins à toute personne en quête de bien-être.
-
+<i class="fa-solid fa-quote-right text-c1 text-[30px]"></i>
 		  </p>
-          <p class="text-yellow-600 text-3xl leading-none text-right">"</p>
-          <p class="text-left text-[24px] text-yellow-600 mt-2">— Lucie M.</p>
+          <p class="hidden text-c1 text-3xl leading-none text-right">"</p>
+          <p class="text-left text-[24px] text-c1 mt-2">— Lucie M.</p>
         </div>
       </div>
     </div>
   </section>
 
   <section class="my-16" data-aos="fade-up">
-    <div class="max-w-6xl mx-auto bg-white shadow-md mt-16">
+    <div class="max-w-7xl mx-auto bg-white shadow-md mt-16">
       <div class="flex flex-col md:flex-row items-center p-4 bg-[#ede9e1]">
         <div class="w-full md:w-1/4 p-2 pr-16 border-r-2 border-gray-800">
           <img alt="A decorative image of flowers" class="w-full h-auto" height="100" src="Assets/Sophrologie.jpg" width="100"/>
@@ -239,15 +244,15 @@
         <div class="w-full md:w-3/4 flex flex-col md:flex-row justify-between p-2 px-16">
           <div class="text-center md:text-left p-2">
             <h2 class="font-bold text-[16px] py-4 text-center text-[#BF9000]">Horaires</h2>
-            <p class="text-[16px] text-center">Du Lundi au Dimanche<br/>8h - 20h</p>
+            <p class="text-[18px] text-center">Du Lundi au Dimanche<br/>8h - 20h</p>
           </div>
           <div class="text-center md:text-left p-2">
             <h2 class="font-bold text-[16px] py-4 text-center text-[#BF9000]">Réservations</h2>
-            <p class="text-[16px] text-center">Rdv au 07 55 01 51 51<br/>22 ou calendrier de réservation ci-</p>
+            <p class="text-[18px] text-center">Rdv au 07 55 01 51 51<br/>22 ou calendrier de réservation ci-</p>
           </div>
           <div class="text-center md:text-left p-2">
             <h2 class="font-bold text-[16px] py-4 text-center text-[#BF9000]">Séances à Distance</h2>
-            <p class="text-[16px] text-center">Soins par Téléphone ou<br/>Visioconférence (Zoom, Skype)</p>
+            <p class="text-[18px] text-center">Soins par Téléphone ou<br/>Visioconférence (Zoom, Skype)</p>
           </div>
         </div>
       </div>
@@ -255,11 +260,11 @@
         <div class="flex flex-col md:flex-row justify-between items-center">
           <div class="text-center md:text-left p-2">
             <h2 class="font-bold text-[17px]">EDAINE</h2>
-            <p class="text-[14px]">Edwige-Énergéticienne<br/>07 55 01 51 22<br/>soins@edaine.com<br/>© 2025 Edaine</p>
+            <p class="text-[14px] font-thin">Edwige-Énergéticienne<br/>07 55 01 51 22<br/>soins@edaine.com<br/>© 2025 Edaine</p>
           </div>
           <div class="text-center md:text-left p-2">
-            <p class="text-xs px-16 text-[11px]">Edwige n’émet aucun avis médical ni de diagnostic. Les soins énergétiques prodigués par Edwige ne remplacent en aucun cas les traitements d’un professionnel de la santé, ni les traitements conventionnels. Si vous rencontrez des problèmes de santé, consultez un professionnel de santé qualifié.
-</p>
+            <p class="text-xs px-32 text-[11px] italic font-thin">Edwige n’émet aucun avis médical ni de diagnostic. Les soins énergétiques prodigués par Edwige ne remplacent en aucun cas les traitements d’un
+professionnel de la santé, ni les traitements conventionnels. Si vous rencontrez des problèmes de santé, consultez un professionnel de santé qualifié..</p>
           </div>
         </div>
         <div class="flex justify-center space-x-4 mt-4 text-[14px]">
